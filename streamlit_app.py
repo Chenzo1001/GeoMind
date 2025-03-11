@@ -18,7 +18,7 @@ if not deepseek_api_key:
 else:
 
     # Create an OpenAI client.
-    client = OpenAI(api_key=deepseek_api_key, base_url=https://dashscope-intl.aliyuncs.com/compatible-mode/v1")
+    client = OpenAI(api_key=deepseek_api_key, base_url="https://dashscope-intl.aliyuncs.com/compatible-mode/v1")
 
     # Create a session state variable to store the chat messages. This ensures that the
     # messages persist across reruns.
