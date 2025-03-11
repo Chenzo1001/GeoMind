@@ -18,7 +18,7 @@ if not deepseek_api_key:
 else:
 
     # Create an OpenAI client.
-    client = openai.Client(api_key=deepseek_api_key, base_url="https://api.deepseek.com")
+    client = OpenAI(api_key=deepseek_api_key, base_url="https://api.deepseek.com")
 
     # Create a session state variable to store the chat messages. This ensures that the
     # messages persist across reruns.
@@ -40,7 +40,7 @@ else:
             st.markdown(prompt)
 
         # Generate a response using the OpenAI API.
-        stream = client.completions.create(
+        stream = client.chat.completions.create(
             model="deepseek-chat",
             messages=[
                 {"role": m["role"], "content": m["content"]}
